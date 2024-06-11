@@ -214,7 +214,7 @@ impl RandomDataSource {
     }
 
     fn entry_info(rng: &mut rand::rngs::ThreadRng) -> EntryInfo {
-        let kinds = vec![
+        let kinds = [
             "CPU".to_string(),
             "GPU".to_string(),
             "OMP".to_string(),

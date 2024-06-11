@@ -1740,7 +1740,9 @@ impl Window {
                 button_text.into_galley(ui, None, available_width, egui::TextStyle::Button);
             let button_size = button_text.size() + 2.0 * button_padding;
 
-            let query_size = ui.available_size().x - button_size.x - ui.spacing().item_spacing.x;
+            const MARGIN: f32 = 4.0; // From egui::TextEdit::margin
+            let query_size =
+                ui.available_size().x - button_size.x - ui.spacing().item_spacing.x - 2.0 * MARGIN;
             egui::TextEdit::singleline(&mut self.config.search_state.query)
                 .desired_width(query_size)
                 .show(ui);

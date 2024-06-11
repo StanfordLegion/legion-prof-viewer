@@ -20,9 +20,9 @@ client = ["dep:reqwest", "dep:url"]
 server = ["dep:actix-cors", "dep:actix-web"]
 
 [dependencies]
-egui = "0.25.0"
-egui_extras = "0.25.0"
-eframe = { version = "0.25.0", default-features = false, features = [
+egui = "0.26.0"
+egui_extras = "0.26.0"
+eframe = { version = "0.26.0", default-features = false, features = [
     "accesskit",     # Make egui comptaible with screen readers. NOTE: adds a lot of dependencies.
     "default_fonts", # Embed the default egui fonts.
     "glow",          # Use the glow rendering backend. Alternative: "wgpu".
